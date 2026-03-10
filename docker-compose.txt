@@ -1,0 +1,21 @@
+Docker compose 
+
+- docker compose manages multiple container in one application
+- docker compose lets you define everything in a single
+  file called "docker-compose.yml"
+
+- docker compose works on your local machine
+  or server
+
+Basic structure of a docker-compose.yml file
+
+version: the compose file format version
+
+servcies: define your containers. each service is like building block.
+      image: pulls a pre-built image form docker
+             hub
+      build: build from local dockerfile ig you want custom images
+      ports: map container ports on host
+      environment: set variables inside the container
+      depends_on: starts services in order (for e.g. web depends on db) 
+      volumes: shares files/folders between host and container
